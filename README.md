@@ -29,3 +29,6 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+##Reference:
+Setup materialize-css (just skip the part of including materialize-css in angular-cli-build.js file, we don't need to to that): https://medium.com/@ladyleet/using-materializecss-with-your-angular-2-angular-cli-app-2eb64b05a1d2#.9zweqzhuo
