@@ -10,6 +10,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { AppService } from './app.service';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 
+import { APPLICATION_ROUTES } from './app.routes';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    APPLICATION_ROUTES
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

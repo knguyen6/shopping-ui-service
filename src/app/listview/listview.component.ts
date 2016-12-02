@@ -15,8 +15,6 @@ export class ListviewComponent implements OnInit {
 
   public error: any;
 
-
-
   constructor(private service: AppService) { }
 
   ngOnInit() {
@@ -29,10 +27,6 @@ export class ListviewComponent implements OnInit {
         console.log(error);
         this.error = error;
       });
-  }
-
-  myFunction() {
-    alert('Is clicked!');
   }
 
 }
