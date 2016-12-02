@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { ListviewComponent } from './listview/listview.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { ErrorhandlerComponent } from './errorhandler/errorhandler.component';
+import { AppService } from './app.service';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +16,14 @@ import { ErrorhandlerComponent } from './errorhandler/errorhandler.component';
     ListviewComponent,
     CartComponent,
     CheckoutComponent,
-    ErrorhandlerComponent
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
