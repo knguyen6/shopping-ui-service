@@ -24,6 +24,8 @@
 npm-debug.log
 testem.log
 /typings
+customerdb.json
+paymentdb.json
 
 # e2e
 /e2e/*.js
