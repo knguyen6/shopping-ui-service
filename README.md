@@ -1,9 +1,49 @@
+```
+____________________   _________ _________            .________________  ____ 
+\__    ___/\_   ___ \ /   _____//   _____/            |   ____/\_____  \/_   |
+  |    |   /    \  \/ \_____  \ \_____  \    ______   |____  \   _(__  < |   |
+  |    |   \     \____/        \/        \  /_____/   /       \ /       \|   |
+  |____|    \______  /_______  /_______  /           /______  //______  /|___|
+                   \/        \/        \/                   \/        \/      
+__________                   __               __                              
+\______   \_______  ____    |__| ____   _____/  |_                            
+ |     ___/\_  __ \/  _ \   |  |/ __ \_/ ___\   __\                           
+ |    |     |  | \(  <_> )  |  \  ___/\  \___|  |                             
+ |____|     |__|   \____/\__|  |\___  >\___  >__|                             
+                        \______|    \/     \/                                 
+```
+
+
 # ShoppingUiService
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Dependencies
+```$xslt
+NodeJS v6.9.1
+npm 3.10.8
+```
+
+## Installation
+```
+sudo npm i angular -g
+git clone https://github.com/knguyen6/shopping-ui-service.git
+cd shopping-ui-service
+npm i
+```
+
+## How to run the app in development mode
+```$xslt
+ng serve
+```
+Navigate to `http://localhost:4200/`.  
+The app will automatically reload if you change any of the source files.  
+
+## How to run the app in production
+```$xslt
+npm start
+```
+
 
 ## Code scaffolding
 
