@@ -1,0 +1,10 @@
+.buttons li{
+
+  height: 30px;
+  width: auto;
+  margin-top: 20px;
+}
+
+.movetoCheckout{
+  float: right;
+}

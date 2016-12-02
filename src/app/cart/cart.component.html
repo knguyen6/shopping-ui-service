@@ -1,3 +1,43 @@
-<p>
-  cart works!
-</p>
+<div class ="pageName">
+  <h4>
+    Your cart items are here.
+  </h4>
+</div>
+
+<div class = "itemized" style="width: 60%; float:left">
+   <ul>
+     <li> Item 1 </li>
+     <li> Item 2 </li>
+     <li> Item 3 </li>
+     <li> Item 4 </li>
+     <li> Item 5 </li>
+     <li> Item 6 </li>
+   </ul>
+</div>
+
+
+<div style="width: 40%; float:right">
+
+  <!-- <form action="demo_form.asp" method="get" id="form1">
+  </form> -->
+  <div class = "operations">
+    <ul class = "buttons">
+      <div ng-controller="CollapseDemoCtrl">
+          <li><button class="btn" ng-click="isCollapsed = !isCollapsed" type="submit" form="form1" value="Submit">
+              View Details</button></li>
+            <hr>
+              <div collapse="isCollapsed">
+                <div class="well well-large"></div>
+              </div>
+      </div>
+      <!-- <li><a ng-click="doSomething($event)"><button type="submit" form="form1" value="Submit">View Details</button></a></li> -->
+      <li><button type="submit" form="form1" value="Submit">Add more Items</button></li>
+      <li><button type="submit" form="form1" value="Submit">Delete</button></li>
+      <li><button type="submit" form="form1" value="Submit">Update</button></li>
+    </ul>
+  </div>
+
+  <div class = "movetoCheckout">
+    <button type="submit" form="form1" value="Submit">Proceed to Checkout</button>
+  </div>
+</div>
