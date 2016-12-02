@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-h1, h2, h3, h4, h5 {
+h3, h4, h5 {
+    color: #263238 ;
+}
+h2{
     color: #212121;
 }
 hr {
     color: #6200ea;
+}
+.center {
+    text-align: center;
 }
