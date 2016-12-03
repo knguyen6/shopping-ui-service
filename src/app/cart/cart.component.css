@@ -30,3 +30,8 @@ li + li.noProduct{
 .view{
   display: block;
 }
+
+.row{
+    overflow-y: scroll;
+    overflow: visible;
+}

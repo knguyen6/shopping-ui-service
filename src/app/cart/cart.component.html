@@ -1,3 +1,5 @@
+<div class="row">
+
 <div class ="pageName">
   <h5>
     Welcome to Shop the Shop!
@@ -14,10 +16,12 @@
            You purchased
          </p>
          {{product.id}}
-         {{product.image_url}}
+         <img src="{{product.image_url}}"  />
+         <br />
          <!-- <button class="view">View Details</button> -->
          <!-- <button onclick="view()">View details</button> -->
          {{product.price}}
+
          {{product.finalAmount}}
          <!-- {{jsonObject.finalAmount}} -->
 
@@ -29,10 +33,17 @@
 </div>
 <div class = "right">
   <ul class = "buttons">
-    <li><button><a href = "http://list-view-microservice.us-west-2.elasticbeanstalk.com/products" [routerLink]="['../products']">Add more Items</a></button></li>
+      <a class="waves-effect waves-light btn" [routerLink]="['../products']">Add more items</a>
 
   </ul>
   <div class = "movetoCheckout">
-    <button type="submit" form="form1" value="Submit"><a href = "http://localhost:4200/checkout"> Proceed to Checkout</a></button>
+      <a class="waves-effect waves-light btn" [routerLink]="['../checkout']">Proceed to checkout</a>
+
+    <!-- <button type="submit" form="form1" value="Submit" class="waves-effect waves-light btn">
+        <a [routerLink]="['../checkout']"> Proceed to Checkout</a></button> -->
   </div>
+</div>
+
+
+
 </div>
