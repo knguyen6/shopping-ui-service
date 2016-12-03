@@ -1,19 +1,29 @@
-<button (click)="addToCart()" [routerLink]="['../cart']">Add to Cart</button>
+<button (click)="addToCart()" [routerLink]="['../cart']">View Cart</button>
 
-<div class="card" *ngFor="let product of products; let i = index;" style="padding: 20px; text-align: right;">
-
-    <input type="checkbox" id="index{{i}}" (change)="onCheckboxChange($event, product)" [checked]="product.checked"/>
-    <label [attr.for]="'index' + i"></label>
-
+<div class="card" *ngFor="let product of products; let i = index;" style="padding: 10px;">
     <div class="card-image waves-effect waves-block waves-light" style="text-align: center; padding: 20px;">
       <img class="activator" src="{{product.image_url}}" style="display: inline-block; height: 200px; width: auto">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4">
+        <div style="text-align: left;">
+          <p class="flow-text">{{product.description}}</p>
+        </div>
+        <div style="text-align: right;">
+          <p>Rating: {{product.rating}}</p>
+          <p>Price: ${{product.price}}</p>
+          <span style="font-size: 70%">
+            Add to Cart
+            <input type="checkbox" id="index{{i}}" (change)="onCheckboxChange($event, product)" [checked]="product.checked"/>
+            <label [attr.for]="'index' + i"></label>
+          </span>
+        </div>
+
+      </span>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <p>{{product.description}}</p>
     </div>
 
 </div>
