@@ -1,4 +1,9 @@
-<button (click)="addToCart()" [routerLink]="['../cart']">View Cart</button>
+<button
+  (click)="addToCart()"
+  [routerLink]="['../cart']"
+  class="waves-effect waves-light btn-large red">
+  View Cart
+</button>
 
 <div class="card" *ngFor="let product of products; let i = index;" style="padding: 10px;">
     <div class="card-image waves-effect waves-block waves-light" style="text-align: center; padding: 20px;">
