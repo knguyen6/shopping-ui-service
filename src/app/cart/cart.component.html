@@ -1,50 +1,37 @@
 <div class ="pageName">
-  <h4>
-    Your cart items are here.
-  </h4>
-</div>
-
-<div class = "itemized" style="width: 60%; float:left">
-   <ul>
-     <li> Item 1 </li>
-     <li> Item 2 </li>
-     <li> Item 3 </li>
-     <li> Item 4 </li>
-     <li> Item 5 </li>
-     <li> Item 6 </li>
-   </ul>
+  <h5>
+    Welcome to Shop the Shop!
+  </h5>
 </div>
 
 
-<div style="width: 40%; float:right">
+<div class = "left">
+  <div class = "itemized">
+     <ul>
 
+       <li class = "yesProduct" *ngFor="let product of products">
+         <p>
+           You purchased
+         </p>
+         {{product.id}}
+         {{product.image_url}}
+         <!-- <button class="view">View Details</button> -->
+         <!-- <button onclick="view()">View details</button> -->
+         {{product.price}}
+         {{product.finalAmount}}
+         <!-- {{jsonObject.finalAmount}} -->
 
-  <!-- <ul class="procedures">
-      <li>
-          <h4><a href="#" ng-click="showDetails = ! showDetails">hello</a></h4>
-           <div class="procedure-details" ng-show="showDetails">
+       </li>
+       <li class = "noProduct"> <h5>There are no items in your cart.<br>
+       Click "ADD" to add items.</h5></li>
+     </ul>
+</div>
+</div>
+<div class = "right">
+  <ul class = "buttons">
+    <li><button><a href = "http://list-view-microservice.us-west-2.elasticbeanstalk.com/products" [routerLink]="['../products']">Add more Items</a></button></li>
 
-           </div>
-      </li>
-  </ul> -->
-
-
-  <!-- <form action="demo_form.asp" method="get" id="form1">
-  </form> -->
-  <div class = "operations">
-    <ul class = "buttons">
-      <li><button ng-click="showDetails = ! showDetails">View Details</button>
-          <div class="operations-details" ng-show="showDetails">
-
-          </div>
-
-      </li>
-      <li><button type="submit" form="form1" value="Submit">Add more Items</button></li>
-      <li><button type="submit" form="form1" value="Submit">Delete</button></li>
-      <li><button type="submit" form="form1" value="Submit">Update</button></li>
-    </ul>
-  </div>
-
+  </ul>
   <div class = "movetoCheckout">
     <button type="submit" form="form1" value="Submit"><a href = "http://localhost:4200/checkout"> Proceed to Checkout</a></button>
   </div>
