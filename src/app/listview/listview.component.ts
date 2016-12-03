@@ -17,11 +17,13 @@ export class ListviewComponent implements OnInit {
   constructor(private service: AppService) { }
 
   ngOnInit() {
+    console.log('this.service.selectedProducts:', this.service.selectedProducts);
     this.service
       .getProducts(ListviewComponent.DEFAULT_LIMIT)
       .subscribe((response) => {
         this.products = response.map((p) => {
-          p.checked = false;
+          let isSelected = this.service.selectedProducts.find(sp => sp.id === p.id);
+          isSelected ? p.checked = true : p.checked = false;
           return p;
         });
       }, (error) => {

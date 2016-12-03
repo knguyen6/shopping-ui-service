@@ -6,11 +6,9 @@ import { COMPOSITION_API } from './app.globals';
 @Injectable()
 export class AppService {
 
-  public selectedProducts: Array<any>;
+  public selectedProducts: Array<any> = [];
 
-  constructor(@Inject(Http) public http: Http) {
-    this.selectedProducts = [];
-  }
+  constructor(@Inject(Http) public http: Http) {}
 
   public getProducts(limit: number) {
     return this.http
