@@ -4,8 +4,7 @@ import { AppService } from '../app.service';
 @Component({
   selector: 'app-listview',
   templateUrl: './listview.component.html',
-  styleUrls: ['./listview.component.css'],
-  providers: [AppService]
+  styleUrls: ['./listview.component.css']
 })
 export class ListviewComponent implements OnInit {
 
