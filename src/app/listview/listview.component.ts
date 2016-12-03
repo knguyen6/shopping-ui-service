@@ -21,12 +21,25 @@ export class ListviewComponent implements OnInit {
     this.service
       .getProducts(ListviewComponent.DEFAULT_LIMIT)
       .subscribe((response) => {
-        console.log(response);
-        this.products = response;
+        this.products = response.map((p) => {
+          p.checked = false;
+          return p;
+        });
       }, (error) => {
         console.log(error);
         this.error = error;
       });
+  }
+
+  public onCheckboxChange(event, product) {
+    event.target.checked ? product.checked = true : product.checked = false;
+  }
+
+  public addToCart() {
+    this.service
+      .addToCart(this.products.filter((p) => {
+        return p.checked;
+      }));
   }
 
 }
