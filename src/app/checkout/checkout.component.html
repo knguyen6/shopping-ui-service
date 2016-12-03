@@ -18,41 +18,37 @@
             <form class="col s12">
               <div class="row">
                   <div class="input-field col s6">
-                    <input id="first_name" type="text" class="validate">
+                    <input placeholder="John" [ngModel]="firstName" [ngModelOptions]="{standalone: true}" id="first_name" type="text" class="validate">
                     <label for="first_name">First Name</label>
                   </div>
                 <div class="input-field col s6">
-                  <input id="last_name" type="text">
+                  <input placeholder="Doe" id="last_name" [ngModel]="lastName" [ngModelOptions]="{standalone: true}" type="text">
                   <label for="last_name">Last Name</label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="email" type="email" class="validate">
+                  <input placeholder="email@email.com" [ngModel]="email" [ngModelOptions]="{standalone: true}" id="email" type="email" class="validate">
                   <label for="email">Email</label>
                 </div>
                 <div class="input-field col s4">
-                  <input id="phone" type="number" class="validate">
+                  <input placeholder="123-987-6542" [ngModel]="phoneNumber" [ngModelOptions]="{standalone: true}" id="phone" type="text" class="validate">
                   <label for="phone">Phone Number</label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s5">
-                  <input id="street_addr" type="text" class="validate">
+                  <input placeholder="123 Maple st" [ngModel]="address" [ngModelOptions]="{standalone: true}" id="street_addr" type="text" class="validate">
                   <label for="street_addr">Street address</label>
                 </div>
-                <div class="input-field col s3">
-                  <input id="city" type="text" class="validate">
-                  <label for="city">City</label>
-                </div>
                 <div class="input-field col s2">
-                  <input id="state" type="text" class="validate">
+                  <input placeholder="WA" [ngModel]="state" [ngModelOptions]="{standalone: true}" id="state" type="text" class="validate">
                   <label for="state">State</label>
                 </div>
                 <div class="input-field col s2">
-                  <input id="zipcode" type="text" maxlength="5" class="validate">
+                  <input placeholder="12345" [ngModel]="zipCode" [ngModelOptions]="{standalone: true}" id="zipcode" type="text" maxlength="5" class="validate">
                   <label for="zipcode">Zip Code</label>
                 </div>
               </div>
@@ -71,24 +67,26 @@
               <form class="col s12">
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="name_on_card" type="text">
+                    <input placeholder="Name on Card" [ngModel]="fullName" [ngModelOptions]="{standalone: true}" id="name_on_card" type="text">
                     <label for="name_on_card">Name on card</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="card_number" type="text">
+                    <input placeholder="Enter credit or debit card number" [ngModel]="cardNumber" [ngModelOptions]="{standalone: true}" id="card_number" type="text">
                     <label for="card_number">Card Number</label>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="exp_date" placeholder="mm/yyyy" type="text" maxlength="5" class="validate">
+                    <input [ngModel]="expiration" [ngModelOptions]="{standalone: true}" id="exp_date" placeholder="mm/yyyy" type="text" maxlength="5" class="validate">
                     <label for="exp_date">Exp date</label>
                   </div>
                   <div class="input-field col s2">
-                    <input id="security_code" type="number" maxlength="3" class="validate">
+                    <input [ngModel]="securityCode" [ngModelOptions]="{standalone: true}"
+                        id="security_code" type="number" maxlength="3"
+                        class="validate" placeholder="123">
                     <label for="security_code">Security Code</label>
                   </div>
                 </div>
@@ -98,7 +96,7 @@
 <!-- button(s) -->
             <div class="row">
                 <div class="col s6">
-                    <a class="waves-effect waves-light btn" [routerLink]="['../confirmation']">Place Order</a>
+                    <a (click)="sendDataToConfirmation(data)"class="waves-effect waves-light btn" [routerLink]="['../confirmation']">Place Order</a>
                 </div>
             </div>
 

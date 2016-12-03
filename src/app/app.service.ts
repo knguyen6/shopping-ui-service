@@ -20,4 +20,25 @@ export class AppService {
   public addToCart(selectedProducts) {
     this.selectedProducts = selectedProducts;
   }
+
+ //customer info:
+ public getCustomerInfo() {
+
+   return this.http
+     .get(`${COMPOSITION_API}/checkout/customer_info/1`)
+     .map((response: Response) => {
+       return JSON.parse(response['_body']);
+     });
+ }
+
+ //payment info:
+ public getPaymentInfo() {
+   return this.http
+     .get(`${COMPOSITION_API}/checkout/payment_info/1`)
+     .map((response: Response) => {
+       return JSON.parse(response['_body']);
+     });
+ }
+
+
 }
